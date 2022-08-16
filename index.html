@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbox Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="wcf-chatroom">
+      <header class="wcf-chatroom-header">
+        <div
+          class="wcf-chatroom-header-options hide-btn"
+          onclick="onClickCloseChat()"
+        >
+          <div class="wcf-chatroom-icon-close"></div>
+        </div>
+        <div class="wcf-chatroom-header-title">Chatbot</div>
+      </header>
+      <main class="wcf-chatroom-chat"></main>
+      <form class="wcf-chatroom-inputarea">
+        <div class="wcf-chatroom-msg-img-icon avatar"></div>
+        <textarea
+          id="wcf-chatroom-message-tb"
+          placeholder="พิมพ์ข้อความของคุณ"
+          rows="1"
+          class="wcf-chatroom-auto-height wcf-chatroom-input"
+          oninput="auto_height(this)"
+        ></textarea>
+        <button
+          type="submit"
+          class="wcf-chatroom-send-btn wcf-icon-btn-send"
+        ></button>
+      </form>
+    </section>
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
+
+    <script
+      src="main.js"
+      data-baseurl="http://10.2.0.13:8005"
+      data-token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTg0Nzc3NjMsImlhdCI6MTY1ODM5MTM2MywiZmlyc3RuYW1lIjoiS2FudGFwb24iLCJsYXN0bmFtZSI6IkhhbmdrbGFuZyIsInVpZCI6IjEyMDAyMDAzNjQyNTYiLCJ0eXBlIjoxfQ.KMTVlKb01B-A3NAFqSm7DaeCstLci5ZGUxgjM8FS2U4"
+    ></script>
+  </body>
+</html>
